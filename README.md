@@ -29,18 +29,18 @@ SYSTEM PREREQUISITES
 --------------------
 
 IndexFS depends on `gflags`, `glog`, and `thrift`. In order to build
-IndexFS from source code, you will also need to install a C++ building
-system such as `gcc`, `g++`, `make`, `autoconf`, `automake`, and
-`libtool`.
+IndexFS from its source, you will also need a C++ building system
+such as `GUN` including `gcc`, `g++`, `make`, `autoconf`, `automake`,
+and `libtool`.
 
 In addition, some benchmarks that IndexFS uses to evaluate system
-performance are build with MPI -- at least one implementation of MPI
+performance are build with `MPI` -- at least one implementation of MPI
 (`OpenMPI`) should be present for these benchmarks to compile and run.
 
 To help ease IndexFS deployment and avoid dependency issues, IndexFS
 provides gflags, glog, and thrift source packages along with its src
-code tar ball. System administrators may directly use these packages
-to build and install these required IndexFS dependencies.
+code. System administrators may directly use these packages to build
+and install these required IndexFS dependencies.
 
 #### STEP-BY-STEP INSTRUCTIONS
 
@@ -48,11 +48,11 @@ to build and install these required IndexFS dependencies.
 
 * **Ubuntu**
 
-      apt-get install gcc g++ make flex bison
-      apt-get install autoconf automake libtool pkg-config
-      apt-get install zlib1g-dev libsnappy-dev
-      apt-get install libboost-all-dev libevent-dev libssl-dev
-      apt-get install pdsh libfuse-dev libopenmpi-dev
+        apt-get install gcc g++ make flex bison
+        apt-get install autoconf automake libtool pkg-config
+        apt-get install zlib1g-dev libsnappy-dev
+        apt-get install libboost-all-dev libevent-dev libssl-dev
+        apt-get install pdsh libfuse-dev libopenmpi-dev
 
 ##### Build & Install Depends
 
@@ -61,16 +61,16 @@ Use GNU standard building process to build and install `gflags`,
 
 * **To build gflags and glog**:
 
-      ./configure && make && sudo make install
+        ./configure && make && sudo make install
 
 NB: thrift's automake scripts have several known bugs, which will
 cause both make and make install to fail. However, those errors are
 not vital in terms of building and installation. Just ignore them
 and life is still good.
 
-* **to build thrift**:
+* **To build thrift**:
 
-      ./configure || make || sudo make install || exit 0
+        ./configure || make || sudo make install || exit 0
 
 BUILD INDEXFS FROM SOURCE
 -------------------------
@@ -83,7 +83,7 @@ automatically for you.
 
 * **To build IndexFS**:
   
-      ./bootstrap.sh
+        ./bootstrap.sh
 
 NB: you don't have to install IndexFS into your system. Our scripts
 will not assume IndexFS binaries to be accessible from your system path.
@@ -102,15 +102,15 @@ So everything is in one box.
 
 * **To start IndexFS server**:
 
-      $INDEXFS_HOME/sbin/start-idxfs.sh
+        $INDEXFS_HOME/sbin/start-idxfs.sh
 
 * **To start IndexFS clients (processes) and run tests**:
 
-      $INDEXFS_HOME/sbin/tree-test.sh
+        $INDEXFS_HOME/sbin/tree-test.sh
 
 * **To stop IndexFS server**:
 
-      $INDEXFS_HOME/sbin/stop-idxfs.sh
+        $INDEXFS_HOME/sbin/stop-idxfs.sh
 
 In the above scripts, IndexFS server will be started as a daemon
 running in the background. It's pid will be remembered at
