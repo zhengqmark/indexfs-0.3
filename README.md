@@ -12,11 +12,10 @@ experiments show that IndexFS is able to our-perform existing solutions
 such as `PVFS`, `Lustre`, and `HDFS`, by as much as orders of magnitude.
 
 The following is a guide describing how to install and run IndexFS on
-your local Linux machine. Please visit our Wiki at
-https://github.com/indexfs-pdl/indexfs/wiki
-to find more information. Please report bugs or feedback to IndexFS
-authors listed in the `AUTHORS` file in the top SRC directory, or send
-an email to indexfs.pdl@gmail.com. Thanks a lot.
+your local Linux machine. Please visit our project home at
+http://www.pdl.cmu.edu for more information. Please also note that
+the current implementation of IndexFS is not of production quality
+and is recommended to be used for research purpose only. Thanks a lot.
 
 INDEXFS INSTALLATION GUIDE
 ==========================
@@ -53,6 +52,14 @@ and install these required IndexFS dependencies.
         apt-get install zlib1g-dev libsnappy-dev
         apt-get install libboost-all-dev libevent-dev libssl-dev
         apt-get install pdsh libfuse-dev libopenmpi-dev
+
+* **Opensuse**
+
+        zypper install gcc gcc-c++ make flex bison
+        zypper install autoconf automake libtool pkg-config
+        zypper install zlib-devel snappy-devel
+        zypper install boost-devel libevent-devel libopenssl-devel
+        zypper install psmisc pdsh fuse-devel openmpi openmpi-devel
 
 ##### Build & Install Depends
 

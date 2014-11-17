@@ -1,0 +1,3 @@
+leveldb_dir=/tmp/indexfs/leveldb
+split_dir=/tmp/indexfs/split
+file_dir=/tmp/indexfs/files
