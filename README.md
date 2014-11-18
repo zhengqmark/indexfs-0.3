@@ -13,7 +13,7 @@ such as `PVFS`, `Lustre`, and `HDFS`, by as much as orders of magnitude.
 
 The following is a guide describing how to install and run IndexFS on
 your local Linux machine. Please visit our project home at
-http://www.pdl.cmu.edu for more information. Please also note that
+http://www.pdl.cmu.edu/indexfs for more information. Please also note that
 the current implementation of IndexFS is not of production quality
 and is recommended to be used for research purpose only. Thanks a lot.
 
