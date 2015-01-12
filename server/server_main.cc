@@ -161,7 +161,8 @@ int main(int argc, char* argv[]) {
   google::SetUsageMessage("IndexFS Scalable Metadata Server");
   google::ParseCommandLineFlags(&argc, &argv, true);
 
-  indexfs::OpenServerLog(indexfs::GetLogFileName());
+  std::string log_filename = indexfs::GetLogFileName();
+  indexfs::OpenServerLog(log_filename);
   indexfs::config = indexfs::LoadServerConfig(indexfs::FLAGS_srvid);
   indexfs::InitEnvironment();
   indexfs::InitRootPartition();
